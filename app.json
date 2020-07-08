@@ -1,0 +1,8 @@
+{
+  "name": "Plaid implementation in nodejs",
+  "description": "A barebones Node.js app using Express 4",
+  "repository": "https://github.com/AliShahbaj/node_paid",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

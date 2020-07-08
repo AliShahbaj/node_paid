@@ -2,6 +2,9 @@
   "name": "plaid-node-walkthrough",
   "version": "0.1.0",
   "description": "A sample app and accompanying walkthrough for the Plaid API.",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
