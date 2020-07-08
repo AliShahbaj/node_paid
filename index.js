@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var moment = require('moment');
 var plaid = require('plaid');
 
-var APP_PORT = 3000;
+const APP_PORT = process.env.PORT || 5000
 var PLAID_CLIENT_ID = '5f05cb691b28e60011b339a1'
 var PLAID_SECRET = 'f53a2d7df11d194d4824950e6489ae'
 var PLAID_PUBLIC_KEY = 'a780398a070c4d3d006d33899e30d1'
@@ -65,17 +65,16 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.get('/', function(request, response, next) {
-  response.send('Hello Shahbaj Ali');
-  // response.render('index.ejs', {
-  //   PLAID_PUBLIC_KEY: PLAID_PUBLIC_KEY,
-  //   PLAID_ENV: PLAID_ENV,
-  //   PLAID_PRODUCTS: PLAID_PRODUCTS,
-  //   PLAID_COUNTRY_CODES: PLAID_COUNTRY_CODES,
-  //   PLAID_OAUTH_REDIRECT_URI: PLAID_OAUTH_REDIRECT_URI,
-  //   PLAID_OAUTH_NONCE: PLAID_OAUTH_NONCE,
-  //   ITEM_ID: ITEM_ID,
-  //   ACCESS_TOKEN: ACCESS_TOKEN,
-  // });
+  response.render('index.ejs', {
+    PLAID_PUBLIC_KEY: PLAID_PUBLIC_KEY,
+    PLAID_ENV: PLAID_ENV,
+    PLAID_PRODUCTS: PLAID_PRODUCTS,
+    PLAID_COUNTRY_CODES: PLAID_COUNTRY_CODES,
+    PLAID_OAUTH_REDIRECT_URI: PLAID_OAUTH_REDIRECT_URI,
+    PLAID_OAUTH_NONCE: PLAID_OAUTH_NONCE,
+    ITEM_ID: ITEM_ID,
+    ACCESS_TOKEN: ACCESS_TOKEN,
+  });
 });
 
 // This is an endpoint defined for the OAuth flow to redirect to.
