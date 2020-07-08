@@ -65,16 +65,17 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.get('/', function(request, response, next) {
-  response.render('index.ejs', {
-    PLAID_PUBLIC_KEY: PLAID_PUBLIC_KEY,
-    PLAID_ENV: PLAID_ENV,
-    PLAID_PRODUCTS: PLAID_PRODUCTS,
-    PLAID_COUNTRY_CODES: PLAID_COUNTRY_CODES,
-    PLAID_OAUTH_REDIRECT_URI: PLAID_OAUTH_REDIRECT_URI,
-    PLAID_OAUTH_NONCE: PLAID_OAUTH_NONCE,
-    ITEM_ID: ITEM_ID,
-    ACCESS_TOKEN: ACCESS_TOKEN,
-  });
+  response.send('Hello Shahbaj Ali');
+  // response.render('index.ejs', {
+  //   PLAID_PUBLIC_KEY: PLAID_PUBLIC_KEY,
+  //   PLAID_ENV: PLAID_ENV,
+  //   PLAID_PRODUCTS: PLAID_PRODUCTS,
+  //   PLAID_COUNTRY_CODES: PLAID_COUNTRY_CODES,
+  //   PLAID_OAUTH_REDIRECT_URI: PLAID_OAUTH_REDIRECT_URI,
+  //   PLAID_OAUTH_NONCE: PLAID_OAUTH_NONCE,
+  //   ITEM_ID: ITEM_ID,
+  //   ACCESS_TOKEN: ACCESS_TOKEN,
+  // });
 });
 
 // This is an endpoint defined for the OAuth flow to redirect to.
