@@ -1,17 +1,16 @@
 # Quickstart for plaid-node
 
-To run this application locally, first install it and then run either of the flows described below. Additionally, please also refer to the [Quickstart guide](https://plaid.com/docs/quickstart).
-
-## Installing the quickstart app
+To run this application locally, first install it and then run either of the flows described below.
+## Installing the node_plaid app
 ``` bash
-git clone https://github.com/plaid/quickstart.git
-cd quickstart/node
+git clone https://github.com/AliShahbaj/node_plaid.git
+cd node_plaid
 npm install
 ```
 
 ## The canonical flow
 ``` bash
-# Start the Quickstart with your API keys from the Dashboard
+# Start the node_plaid with your API keys from the Dashboard
 # https://dashboard.plaid.com/account/keys
 #
 # PLAID_PRODUCTS is a comma-separated list of products to use when
